@@ -1,0 +1,27 @@
+
+
+汇编： 间接寻址
+
+	B0MOV Y,#0 ;Y 清零以寻址 RAM bank 0。
+	B0MOV Z,#00H ;设定寄存器地址。
+
+	;MOV A , #04H
+	
+	B0MOV A,@YZ
+
+	ADD A , #01;
+
+	B0MOV @YZ,A
+
+	B0MOV A,@YZ
+	
+
+
+
+c 指针读写内存
+
+unsigned char * p ; 
+
+p = (unsigned char __RAM *)0x05; //0x05 为内存地址
+
+*p = *p + 1; //读写操作
