@@ -25,3 +25,7 @@ unsigned char * p ;
 p = (unsigned char __RAM *)0x05; //0x05 为内存地址
 
 *p = *p + 1; //读写操作
+
+
+
+10086
